@@ -1,9 +1,11 @@
+"""Game Dinosaur"""
 import pygame
 
 from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
 
 class Game:
+    """Class game Dinosaur"""
     def __init__(self):
         pygame.init()
         pygame.display.set_caption(TITLE)
