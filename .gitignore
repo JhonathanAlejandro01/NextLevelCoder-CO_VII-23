@@ -133,3 +133,5 @@ dmypy.json
 dino_venv/
 
 .vscode/
+
+.pylintrc
