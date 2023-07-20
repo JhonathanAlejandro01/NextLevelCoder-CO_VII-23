@@ -75,7 +75,7 @@ DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
 
 
-# START NEW POWER-UP
+# ---------- START NEW POWER-UP ----------
 COIN_TYPE = "coin"
 
 COIN = pygame.image.load(os.path.join(IMG_DIR, 'Other/Coin/24.png'))
@@ -92,8 +92,15 @@ DUCKING_COIN = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuckYellow1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuckYellow2.png")),
 ]
-# END NEW POWER-UP
+# ---------- END NEW POWER-UP ----------
 
-# sound game
+# ---------- sound game ----------
 pygame.mixer.init()  # Initialize audio but get error
 MUSIC_GAME = pygame.mixer.music.load(os.path.join(IMG_DIR, 'Sounds/music.ogg'))
+# SOUND_UP = pygame.image.load(os.path.join(IMG_DIR, 'Sound/volume_up.png'))
+# SOUND_DOWN = pygame.image.load(os.path.join(IMG_DIR, 'Sound/volume_down.png'))
+# SOUND_MAX = pygame.image.load(os.path.join(IMG_DIR, 'Sound/volume_max.png'))
+# SOUND_MUTED = pygame.image.load(
+#     os.path.join(IMG_DIR, 'Sound/volume_muted.png'))
+
+# ---------- END sound game ----------
