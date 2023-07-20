@@ -104,3 +104,6 @@ MUSIC_GAME = pygame.mixer.music.load(os.path.join(IMG_DIR, 'Sounds/music.ogg'))
 #     os.path.join(IMG_DIR, 'Sound/volume_muted.png'))
 
 # ---------- END sound game ----------
+
+COLOR_BLACK = (0, 0, 0)
+FONT = 'D:/Estudios/jala/juego/NextLevelCoder-CO_VII-23/dino_runner/assets/font/Lumanosimo-Regular.ttf'

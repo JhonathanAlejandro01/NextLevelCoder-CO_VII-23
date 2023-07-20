@@ -4,9 +4,11 @@ from dino_runner.components.items.item_manager import ItemManager
 from dino_runner.components.music.music import Music
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.powerups.powerup_manager import PowerUpManager
+from dino_runner.components.text_game import TextGame
 
 from dino_runner.utils.constants import (
     BG,
+    COLOR_BLACK,
     ICON,
     SCREEN_HEIGHT,
     SCREEN_WIDTH,
@@ -36,6 +38,7 @@ class Game:
         self.item_manager = ItemManager()
         self.score = 0
         self.music_game = Music()
+        self.text_screen = TextGame()
 
     def run(self):
         # Game loop: events - update - draw
@@ -58,6 +61,7 @@ class Game:
         self.item_manager.update(self)
         # self.music_game.update()
         self.increase_score()
+        self.text_screen.update(F'POINTS: {str(self.score)}', COLOR_BLACK)
 
     def draw(self):
         self.clock.tick(FPS)
@@ -67,6 +71,7 @@ class Game:
         self.obstacle_manager.draw(self.screen)
         self.powerup_manager.draw(self.screen)
         self.item_manager.draw(self.screen)
+        self.text_screen.draw(self.screen)
         pygame.display.update()
         pygame.display.flip()
 
