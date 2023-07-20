@@ -56,6 +56,7 @@ class Game:
         self.obstacle_manager.update(self)
         self.powerup_manager.update(self)
         self.item_manager.update(self)
+        # self.music_game.update()
         self.increase_score()
 
     def draw(self):
