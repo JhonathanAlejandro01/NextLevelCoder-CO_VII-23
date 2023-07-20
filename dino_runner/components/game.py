@@ -1,6 +1,7 @@
 """Game Dinosaur"""
 import pygame
 from dino_runner.components.items.item_manager import ItemManager
+from dino_runner.components.music.music import Music
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.powerups.powerup_manager import PowerUpManager
 
@@ -34,6 +35,7 @@ class Game:
         self.powerup_manager = PowerUpManager()
         self.item_manager = ItemManager()
         self.score = 0
+        self.music_game = Music()
 
     def run(self):
         # Game loop: events - update - draw
