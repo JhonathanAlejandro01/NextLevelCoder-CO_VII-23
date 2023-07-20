@@ -113,9 +113,9 @@ class Dinosaur(Sprite):
         self.rect.y = self.DUCK_POS_Y
         self.step_index += 1
 
-    def dead(self):
-        self.image = self.dead
-        self.rect = self.image.get_rect()
-        self.rect.x = self.POS_X
-        self.rect.y = self.POS_Y
-        self.step_index += 1
+    # def dead(self):
+    #     self.image = self.dead
+    #     self.rect = self.image.get_rect()
+    #     self.rect.x = self.POS_X
+    #     self.rect.y = self.POS_Y
+    #     self.step_index += 1

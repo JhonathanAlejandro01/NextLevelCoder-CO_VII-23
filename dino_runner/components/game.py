@@ -61,7 +61,7 @@ class Game:
         self.item_manager.update(self)
         # self.music_game.update()
         self.increase_score()
-        self.text_screen.update(F'POINTS: {str(self.score)}', COLOR_BLACK)
+        self.text_screen.update(f'POINTS: {str(self.score)}', COLOR_BLACK)
 
     def draw(self):
         self.clock.tick(FPS)
