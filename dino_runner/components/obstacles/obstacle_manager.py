@@ -24,7 +24,6 @@ class ObstacleManager:
             self.create_obstacle()
         self.has_obstacle = self.obstacle.update(game.game_speed)
         if game.player.rect.colliderect(self.obstacle.rect):
-            print(game.player.type)
             if game.player.type == SHIELD_TYPE:
                 game.player.type = DEFAULT_TYPE
                 self.has_obstacle = False

@@ -2,8 +2,12 @@
 import pygame
 from pygame.sprite import Sprite
 from dino_runner.utils.constants import (
+    COIN_TYPE,
     DEAD,
+    DUCKING_COIN,
     DUCKING_SHIELD,
+    JUMPING_COIN,
+    RUNNING_COIN,
     RUNNING_SHIELD,
     JUMPING_SHIELD,
     RUNNING,
@@ -26,10 +30,13 @@ class Dinosaur(Sprite):
     JUMP_VELOCITY = 8.5
 
     def __init__(self):
-        self.running_img = {DEFAULT_TYPE: RUNNING, SHIELD_TYPE: RUNNING_SHIELD}
-        self.jumping_img = {DEFAULT_TYPE: JUMPING, SHIELD_TYPE: JUMPING_SHIELD}
-        self.ducking_img = {DEFAULT_TYPE: DUCKING, SHIELD_TYPE: DUCKING_SHIELD}
-        self.dead_img = DEAD
+        self.running_img = {DEFAULT_TYPE: RUNNING,
+                            SHIELD_TYPE: RUNNING_SHIELD, COIN_TYPE: RUNNING_COIN}
+        self.jumping_img = {DEFAULT_TYPE: JUMPING,
+                            SHIELD_TYPE: JUMPING_SHIELD, COIN_TYPE: JUMPING_COIN}
+        self.ducking_img = {DEFAULT_TYPE: DUCKING,
+                            SHIELD_TYPE: DUCKING_SHIELD, COIN_TYPE: DUCKING_COIN}
+        # self.dead_img = DEAD NO FUNCIONA TODAVIA
         self.type = DEFAULT_TYPE
         self.image = self.running_img[self.type][0]
         self.rect = self.image.get_rect()
@@ -108,7 +115,7 @@ class Dinosaur(Sprite):
         self.rect.y = self.DUCK_POS_Y
         self.step_index += 1
 
-    def dead(self):
+    def dead(self):  # sin implementar
         self.image = self.dead
         self.rect = self.image.get_rect()
         self.rect.x = self.POS_X

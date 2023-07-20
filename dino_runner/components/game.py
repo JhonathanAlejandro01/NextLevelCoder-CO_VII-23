@@ -7,6 +7,7 @@ from dino_runner.components.powerups.powerup_manager import PowerUpManager
 from dino_runner.utils.constants import (
     BG,
     ICON,
+    MUSIC_GAME,
     SCREEN_HEIGHT,
     SCREEN_WIDTH,
     TITLE,
@@ -34,6 +35,7 @@ class Game:
         self.powerup_manager = PowerUpManager()
         self.item_manager = ItemManager()
         self.score = 0
+        self.music_game = MUSIC_GAME
 
     def run(self):
         # Game loop: events - update - draw
@@ -68,6 +70,9 @@ class Game:
         pygame.display.flip()
 
     def increase_score(self):
+        """
+        Increase the score by one every time an obstacle is passed and a power-up or item appears
+        """
         self.score += 1
 
     def draw_background(self):

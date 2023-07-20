@@ -1,4 +1,5 @@
 import random
+from dino_runner.components.powerups.coin import Coin
 from dino_runner.components.powerups.shield import Shield
 
 
@@ -23,7 +24,8 @@ class PowerUpManager:
                 game.player.type = self.powerup.type
 
     def create_powerup(self):
-        self.powerup = Shield()
+        list_powerups = [Shield(), Coin()]
+        self.powerup = random.choice(list_powerups)
         self.has_powerup = True
 
     def draw(self, screen):

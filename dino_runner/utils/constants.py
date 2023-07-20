@@ -27,6 +27,10 @@ RUNNING_HAMMER = [
 ]
 
 JUMPING = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJump.png"))
+
+DEAD = pygame.image.load(os.path.join(
+    IMG_DIR, "Dino/DinoDead.png"))  # add image dead
+
 JUMPING_SHIELD = pygame.image.load(
     os.path.join(IMG_DIR, "Dino/DinoJumpShield.png"))
 JUMPING_HAMMER = pygame.image.load(
@@ -47,6 +51,23 @@ DUCKING_HAMMER = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck2.png")),
 ]
 
+# START NEW POWER-UP
+COIN = pygame.image.load(os.path.join(IMG_DIR, 'Other/mayan_golden_token.png'))
+
+RUNNING_COIN = [
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRunYellow1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRunYellow2.png")),
+]
+
+JUMPING_COIN = pygame.image.load(
+    os.path.join(IMG_DIR, "Dino/DinoJumpYellow.png"))
+
+DUCKING_COIN = [
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuckYellow1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuckYellow2.png")),
+]
+# END NEW POWER-UP
+
 SMALL_CACTUS = [
     pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus2.png")),
@@ -64,7 +85,7 @@ BIRD = [
 ]
 
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
-SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
+SHIELD = [pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))]
 HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
@@ -73,3 +94,8 @@ HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
+COIN_TYPE = "coin"
+
+# sound game
+pygame.mixer.init()  # Initialize audio but get error
+MUSIC_GAME = pygame.mixer.music.load(os.path.join(IMG_DIR, 'Sounds/music.ogg'))
