@@ -4,7 +4,7 @@ import random
 import pygame
 from dino_runner.components.obstacles.bird import Bird
 from dino_runner.components.obstacles.cactus import Cactus
-from dino_runner.utils.constants import DEAD, DEFAULT_TYPE, SHIELD_TYPE
+from dino_runner.utils.constants import DEFAULT_TYPE, SHIELD_TYPE
 
 
 class ObstacleManager:

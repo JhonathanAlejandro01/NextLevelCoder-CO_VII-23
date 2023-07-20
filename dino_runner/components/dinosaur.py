@@ -2,7 +2,6 @@
 import pygame
 from pygame.sprite import Sprite
 from dino_runner.utils.constants import (
-    DEAD,
     DUCKING_SHIELD,
     RUNNING_SHIELD,
     JUMPING_SHIELD,
@@ -29,7 +28,6 @@ class Dinosaur(Sprite):
         self.running_img = {DEFAULT_TYPE: RUNNING, SHIELD_TYPE: RUNNING_SHIELD}
         self.jumping_img = {DEFAULT_TYPE: JUMPING, SHIELD_TYPE: JUMPING_SHIELD}
         self.ducking_img = {DEFAULT_TYPE: DUCKING, SHIELD_TYPE: DUCKING_SHIELD}
-        self.dead_img = DEAD
         self.type = DEFAULT_TYPE
         self.image = self.running_img[self.type][0]
         self.rect = self.image.get_rect()
