@@ -93,3 +93,7 @@ DUCKING_COIN = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuckYellow2.png")),
 ]
 # END NEW POWER-UP
+
+# sound game
+pygame.mixer.init()  # Initialize audio but get error
+MUSIC_GAME = pygame.mixer.music.load(os.path.join(IMG_DIR, 'Sounds/music.ogg'))
