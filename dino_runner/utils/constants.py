@@ -73,3 +73,23 @@ HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
+
+
+# START NEW POWER-UP
+COIN_TYPE = "coin"
+
+COIN = pygame.image.load(os.path.join(IMG_DIR, 'Other/Coin/24.png'))
+
+RUNNING_COIN = [
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRunYellow1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRunYellow2.png")),
+]
+
+JUMPING_COIN = pygame.image.load(
+    os.path.join(IMG_DIR, "Dino/DinoJumpYellow.png"))
+
+DUCKING_COIN = [
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuckYellow1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuckYellow2.png")),
+]
+# END NEW POWER-UP

@@ -1,8 +1,16 @@
 import random
+
+import pygame
+from dino_runner.components.powerups.coin import Coin
 from dino_runner.components.powerups.shield import Shield
+from dino_runner.utils.constants import DEFAULT_TYPE
 
 
 class PowerUpManager:
+    """
+    Manages all aspects of a player's ability to collect power ups during their run through D
+    - Creates new power-ups at regular intervals
+    """
 
     def __init__(self):
         self.has_powerup = False
@@ -21,9 +29,13 @@ class PowerUpManager:
             if game.player.rect.colliderect(self.powerup.rect):
                 self.has_powerup = False
                 game.player.type = self.powerup.type
+                if game.player.type == 'coin':
+                    game.score *= 2
+                    # game.player.type = DEFAULT_TYPE
 
     def create_powerup(self):
-        self.powerup = Shield()
+        list_powerups = [Shield(), Coin()]
+        self.powerup = random.choice(list_powerups)
         self.has_powerup = True
 
     def draw(self, screen):
