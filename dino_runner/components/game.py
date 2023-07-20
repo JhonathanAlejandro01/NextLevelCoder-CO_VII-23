@@ -1,5 +1,6 @@
 """Game Dinosaur"""
 import pygame
+from dino_runner.components.items.item_manager import ItemManager
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.powerups.powerup_manager import PowerUpManager
 
@@ -31,6 +32,7 @@ class Game:
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
         self.powerup_manager = PowerUpManager()
+        self.item_manager = ItemManager()
         self.score = 0
 
     def run(self):
@@ -51,6 +53,7 @@ class Game:
         self.player.update(pygame.key.get_pressed())
         self.obstacle_manager.update(self)
         self.powerup_manager.update(self)
+        self.item_manager.update(self)
         self.increase_score()
 
     def draw(self):
@@ -60,6 +63,7 @@ class Game:
         self.player.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
         self.powerup_manager.draw(self.screen)
+        self.item_manager.draw(self.screen)
         pygame.display.update()
         pygame.display.flip()
 
