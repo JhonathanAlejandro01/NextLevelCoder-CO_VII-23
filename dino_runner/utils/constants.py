@@ -76,7 +76,9 @@ SHIELD_TYPE = "shield"
 
 
 # START NEW POWER-UP
-COIN = pygame.image.load(os.path.join(IMG_DIR, 'Other/mayan_golden_token.png'))
+COIN_TYPE = "coin"
+
+COIN = pygame.image.load(os.path.join(IMG_DIR, 'Other/Coin/24.png'))
 
 RUNNING_COIN = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRunYellow1.png")),
