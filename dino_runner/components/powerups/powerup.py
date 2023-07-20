@@ -6,7 +6,7 @@ from dino_runner.utils.constants import DEFAULT_TYPE, SCREEN_WIDTH
 
 class PowerUp(Sprite):
     def __init__(self, image):
-        self.image = image[0]
+        self.image = image
         self.rect = self.image.get_rect()
         self.rect.x = SCREEN_WIDTH + 40
         self.rect.y = random.randint(200, 250)
